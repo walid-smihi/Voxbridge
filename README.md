@@ -34,7 +34,7 @@ Le plus simple est d'utiliser le script fourni dans ce projet (voir section inst
 - Windows
 - Python 3.10+
 - `ffmpeg` disponible dans le `PATH`
-- Git
+- Git (optionnel, requis seulement pour `install_whisper.ps1`)
 - CMake
 
 ## Installation rapide
@@ -147,4 +147,5 @@ Ces fichiers sont ignores par Git via `.gitignore`.
 ## Licence
 
 MIT (voir `LICENSE`).
+
 
