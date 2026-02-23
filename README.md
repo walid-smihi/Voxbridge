@@ -6,7 +6,6 @@ Application Python de transcription audio en direct (anglais) avec `whisper.cpp`
 
 - `transcriptor.py`: transcription EN en temps reel.
 - `traductor.py`: transcription EN + traduction FR (Argos Translate).
-- `testvbaudio.py`: test de detection de son sur un device audio.
 - `app_gui.py`: lance l'interface desktop (Tkinter).
 - `app/`: logique coeur + config + UI.
 
@@ -67,7 +66,6 @@ pip install -r requirements-loopback.txt
 - dossier `app/`
 - `transcriptor.py`
 - `traductor.py`
-- `testvbaudio.py`
 - `install_deps.ps1`
 - `requirements.txt`
 - `requirements-loopback.txt`
@@ -159,19 +157,13 @@ Fonctions disponibles:
 
 ## Utilisation
 
-### 1) Tester le device audio
-
-```bash
-python testvbaudio.py
-```
-
-### 2) Lister les peripheriques audio
+### 1) Lister les peripheriques audio
 
 ```bash
 python transcriptor.py --list-devices
 ```
 
-### 3) Transcription (EN)
+### 2) Transcription (EN)
 
 ```bash
 python transcriptor.py
@@ -179,7 +171,7 @@ python transcriptor.py --minimal
 python transcriptor.py --loopback
 ```
 
-### 4) Transcription + traduction (EN -> FR)
+### 3) Transcription + traduction (EN -> FR)
 
 ```bash
 python traductor.py
@@ -235,5 +227,7 @@ Emplacement attendu en local:
 Si les modeles ne sont pas telecharges:
 - les scripts CLI s'arretent avec un message clair,
 - la GUI affiche une erreur au Start et ne lance pas le worker.
+
+
 
 
