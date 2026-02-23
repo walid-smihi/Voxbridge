@@ -1,4 +1,4 @@
-﻿# VoxBridge
+# VoxBridge
 
 Application Python de transcription audio en direct (anglais) avec `whisper.cpp`, avec option de traduction vers le francais.
 
@@ -110,7 +110,7 @@ Les scripts utilisent par defaut:
 - `whisper.cpp/models/ggml-tiny.en.bin`
 
 Sources officielles des modeles:
-- https://github.com/ggml-org/whisper.cpp/blob/master/models/README.md
+- https://github.com/ggml-org/whisper.cpp/tree/master/models
 - https://huggingface.co/ggerganov/whisper.cpp/tree/main
 
 Script officiel de download (dans `whisper.cpp/models/`):
@@ -235,4 +235,5 @@ Emplacement attendu en local:
 Si les modeles ne sont pas telecharges:
 - les scripts CLI s'arretent avec un message clair,
 - la GUI affiche une erreur au Start et ne lance pas le worker.
+
 
