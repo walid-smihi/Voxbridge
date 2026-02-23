@@ -1,0 +1,29 @@
+﻿# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Runtime outputs
+logs.txt
+temp_audio.wav
+temp_audio_16k.wav
+
+# Whisper model binaries (large files)
+whisper.cpp/models/*.bin
+
+# Optional local build artifacts
+whisper.cpp/build/
+
+# Local GUI config
+app_config.json
+
+
+# IDE local files
+.vs/
+.vscode/
+whisper.cpp/build-cuda/
+
+
+# External dependency (download locally)
+whisper.cpp/
+
