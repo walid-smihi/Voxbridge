@@ -14,8 +14,9 @@ VoxBridge est une application Python de transcription audio en direct (anglais) 
 
 - `app_gui.py` : lance l'interface desktop
 - `app/` : logique coeur + config + UI
-- `transcriptor.py` : mode CLI transcription
-- `traductor.py` : mode CLI transcription + traduction
+- `cli_common.py` : logique CLI partagee (capture audio, whisper, options)
+- `transcriptor.py` : wrapper CLI transcription
+- `traductor.py` : wrapper CLI transcription + traduction
 - `install_deps.ps1` : installe les dependances Python
 - `install_whisper.ps1` : telecharge/prepare `whisper.cpp` + modele
 
@@ -113,6 +114,8 @@ Fonctions principales:
 
 ### CLI transcription
 
+`transcriptor.py` utilise la logique commune de `cli_common.py`.
+
 ```powershell
 python .\transcriptor.py
 python .\transcriptor.py --minimal
@@ -120,7 +123,9 @@ python .\transcriptor.py --list-devices
 python .\transcriptor.py --loopback
 ```
 
-#### CLI transcription + traduction
+### CLI transcription + traduction
+
+`traductor.py` utilise la meme logique commune, avec traduction EN -> FR activee.
 
 ```powershell
 python .\traductor.py
